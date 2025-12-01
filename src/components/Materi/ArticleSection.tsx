@@ -96,30 +96,45 @@ function ArticleCard({ article, index }: { article: any; index: number }) {
             </div>
 
             {/* Content */}
-            <div className="absolute inset-0 z-20 p-8 flex flex-col justify-end">
-                <div className="mb-auto flex justify-between items-start">
-                    <span className="px-3 py-1 rounded-full border border-white/20 text-xs text-white backdrop-blur-md">
-                        {article.category}
-                    </span>
-                    <span className="text-gray-400 text-xs font-mono">
-                        {article.readTime}
-                    </span>
-                </div>
+            <div className="relative group w-full h-[600px] rounded-2xl overflow-hidden bg-black">
+    
+    {/* Background Image Full */}
+    <div
+        className="absolute inset-0 bg-cover bg-center transition-all duration-500 group-hover:scale-105"
+        style={{ backgroundImage: `url(${article.image})` }}
+    />
 
-                <div className="transform transition-transform duration-500 group-hover:-translate-y-4">
-                    <h3 className="text-3xl font-heading font-bold text-white mb-3 leading-tight group-hover:text-red-500 transition-colors">
-                        {article.title}
-                    </h3>
-                    <p className="text-gray-300 text-sm line-clamp-3 mb-6 opacity-80 group-hover:opacity-100">
-                        {article.excerpt}
-                    </p>
-                    
-                    <div className="flex items-center gap-2 text-red-400 text-sm font-bold opacity-0 transform translate-y-4 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0">
-                        <span>Baca Selengkapnya</span>
-                        <i className="fas fa-arrow-right"></i>
-                    </div>
-                </div>
-            </div>
+    {/* Gradient overlay biar teks terbaca */}
+    <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/90" />
+
+    {/* CONTENT */}
+    <div className="relative z-20 p-8 flex flex-col justify-end h-full">
+        
+        <div className="flex justify-between items-start mb-4">
+            <span className="px-3 py-1 rounded-full border border-white/20 text-xs text-white backdrop-blur-md">
+                {article.category}
+            </span>
+            <span className="text-gray-400 text-xs font-mono">
+                {article.readTime}
+            </span>
+        </div>
+
+        <h3 className="text-3xl font-heading font-bold text-white mb-3 leading-tight group-hover:text-red-500 transition-colors">
+            {article.title}
+        </h3>
+
+        <p className="text-gray-300 text-sm line-clamp-3 mb-6 opacity-80 group-hover:opacity-100">
+            {article.excerpt}
+        </p>
+
+        <div className="flex items-center gap-2 text-red-400 text-sm font-bold opacity-0 transform translate-y-4 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0">
+            <span>Baca Selengkapnya</span>
+            <i className="fas fa-arrow-right"></i>
+        </div>
+
+    </div>
+</div>
+
 
             {/* Number Watermark */}
             <div className="absolute top-4 right-6 text-9xl font-bold text-white/5 z-0 font-heading">

@@ -23,43 +23,64 @@ export const articles: Article[] = [
         author: "Author",
         date: "25 Nov 2025",
         content: `
-            <p class="lead text-xl md:text-2xl leading-relaxed mb-8 text-gray-200">
-                <span class="text-6xl float-left mr-3 mt-[-10px] font-heading font-bold text-red-500">B</span>atik adalah seni melukis di atas kain dengan menggunakan lilin malam sebagai perintang warna. Namun, di balik tekniknya yang rumit, tersimpan filosofi hidup yang mendalam.
-            </p>
-            
-            <div class="my-12 p-8 bg-gradient-to-br from-red-900/20 to-black border-l-4 border-red-500 rounded-r-xl">
-                <h4 class="text-red-400 font-bold text-lg mb-2 uppercase tracking-wider">Poin Kunci</h4>
-                <ul class="list-disc pl-5 space-y-2 text-gray-300">
-                    <li>Batik adalah warisan lisan dan nonbendawi UNESCO.</li>
-                    <li>Setiap motif memiliki makna doa dan harapan.</li>
-                    <li>Batik modern adalah simbol identitas yang adaptif.</li>
-                </ul>
+        <p class="lead text-xl md:text-2xl leading-relaxed mb-8 text-gray-200">
+            <span class="text-6xl float-left mr-3 mt-[-10px] font-heading font-bold text-red-500">B</span>atik merupakan warisan budaya yang bukan hanya indah secara visual, tetapi juga sarat makna filosofis. Setiap goresan, motif, hingga warna pada batik mengandung simbol-simbol yang mencerminkan pandangan hidup, nilai-nilai moral, serta identitas bangsa Indonesia.
+        </p>
+
+        <div class="my-12 p-8 bg-gradient-to-br from-red-900/20 to-black border-l-4 border-red-500 rounded-r-xl">
+            <h4 class="text-red-400 font-bold text-lg mb-2 uppercase tracking-wider">Poin Penting</h4>
+            <ul class="list-disc pl-5 space-y-2 text-gray-300">
+                <li>Batik adalah representasi identitas bangsa Indonesia yang lahir dari nilai filosofi dan spiritualitas.</li>
+                <li>Setiap motif batik memiliki makna khusus yang berkaitan dengan kehidupan, harapan, dan moralitas.</li>
+                <li>Batik digunakan dalam berbagai upacara adat sebagai simbol status, doa, dan etika sosial.</li>
+            </ul>
+        </div>
+
+        <h3 class="text-2xl font-heading font-bold mb-3">Makna Filosofis dalam Motif Batik</h3>
+        <p class="mb-6 text-gray-300">
+            Batik tidak hanya berfungsi sebagai kain dekoratif, tetapi juga menjadi media penyampai pesan-pesan filosofis. Motif-motif batik menyimpan nilai-nilai luhur yang diwariskan secara turun-temurun. Nilai tersebut meliputi ketakwaan, keselarasan hidup, kebijaksanaan, hingga etika bermasyarakat.
+        </p>
+
+        <h3 class="text-2xl font-heading font-bold mb-3">Motif Parang: Simbol Kekuatan dan Keberlanjutan</h3>
+        <p class="text-gray-300 mb-6">
+            Motif Parang merupakan salah satu motif tertua dan memiliki filosofi keteguhan, kekuatan, serta kontinuitas. Bentuknya yang menyerupai ombak melambangkan semangat tiada henti untuk memperbaiki diri. Motif ini dahulu hanya digunakan oleh kalangan bangsawan sebagai simbol kearifan dan kewibawaan.
+        </p>
+
+        <blockquote class="my-10 pl-6 border-l-4 border-white/20 italic text-2xl text-gray-400 font-serif">
+            "Motif parang mengajarkan manusia untuk terus berjuang dan menjaga kesinambungan dalam kehidupan."
+        </blockquote>
+
+        <h3 class="text-2xl font-heading font-bold mb-3">Motif Kawung: Kesucian dan Pengendalian Diri</h3>
+        <p class="text-gray-300 mb-6">
+            Motif Kawung merupakan simbol kesucian, pengendalian diri, dan kesempurnaan. Terinspirasi dari buah aren, motif ini melambangkan keseimbangan hidup manusia. Pada masa lalu, motif kawung sering digunakan oleh pemimpin untuk mengingatkan agar selalu bersikap adil dan bijaksana.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-6 my-12">
+            <div class="bg-white/5 p-6 rounded-xl">
+                <h5 class="font-bold text-white mb-2">Filosofi Motif Parang</h5>
+                <p class="text-sm text-gray-400">Kekuatan, keteguhan, keberlanjutan, dan kebijaksanaan hidup.</p>
             </div>
-
-            <h3>Motif Parang: Semangat Pantang Menyerah</h3>
-            <p>Motif Parang adalah salah satu motif tertua di Indonesia. Bentuknya yang menyerupai ombak laut yang tak henti menghantam karang melambangkan semangat yang tidak pernah padam.</p>
-            
-            <blockquote class="my-10 pl-6 border-l-4 border-white/20 italic text-2xl text-gray-400 font-serif">
-                "Ini adalah pesan bagi setiap generasi untuk terus berjuang memperbaiki diri dan bangsa."
-            </blockquote>
-
-            <h3>Motif Kawung: Kesucian dan Keadilan</h3>
-            <p>Terinspirasi dari buah kolang-kaling, motif Kawung melambangkan hati yang bersih. Dalam konteks kepemimpinan, motif ini mengingatkan pemimpin agar selalu ingat asal-usulnya dan berlaku adil kepada rakyatnya.</p>
-
-            <div class="grid md:grid-cols-2 gap-6 my-12">
-                <div class="bg-white/5 p-6 rounded-xl">
-                    <h5 class="font-bold text-white mb-2">Filosofi</h5>
-                    <p class="text-sm text-gray-400">Kesucian hati dan pengendalian diri yang kuat.</p>
-                </div>
-                <div class="bg-white/5 p-6 rounded-xl">
-                    <h5 class="font-bold text-white mb-2">Penerapan</h5>
-                    <p class="text-sm text-gray-400">Sikap adil dan bijaksana seorang pemimpin.</p>
-                </div>
+            <div class="bg-white/5 p-6 rounded-xl">
+                <h5 class="font-bold text-white mb-2">Filosofi Motif Kawung</h5>
+                <p class="text-sm text-gray-400">Kesucian hati, self-control, dan harmoni dalam kehidupan.</p>
             </div>
+        </div>
 
-            <h3>Batik di Era Modern</h3>
-            <p>Hari ini, batik telah bertransformasi. Tidak lagi hanya busana formal, batik kini menjadi simbol identitas yang bangga dikenakan oleh anak muda. UNESCO pun telah mengakuinya sebagai Warisan Kemanusiaan untuk Budaya Lisan dan Nonbendawi.</p>
-        `
+        <h3 class="text-2xl font-heading font-bold mb-3">Batik sebagai Identitas Nasional</h3>
+        <p class="text-gray-300 mb-6">
+            Batik adalah identitas bangsa Indonesia yang tidak dapat dipisahkan dari sejarah, budaya, dan nilai-nilai masyarakat. Penggunaan batik dalam ritual adat, pernikahan, kelahiran, hingga kematian menunjukkan bagaimana batik menjadi bagian integral dari perjalanan hidup manusia Indonesia.
+        </p>
+
+        <p class="text-gray-300 mb-6">
+            Selain itu, pengakuan UNESCO terhadap batik sebagai <em>Intangible Cultural Heritage</em> memperkuat posisinya sebagai warisan budaya yang harus dilestarikan. Generasi muda memiliki peran penting untuk menjaga keberlanjutan batik sebagai simbol kebanggaan nasional.
+        </p>
+
+        <h3 class="text-2xl font-heading font-bold mb-3">Kesimpulan</h3>
+        <p class="text-gray-300 mb-8">
+            Batik bukan sekadar karya seni, namun juga media nilai-nilai luhur yang menyatukan masyarakat Indonesia. Filosofi di setiap motif bukan hanya estetika, melainkan ajakan untuk menjaga moralitas, kearifan, dan identitas bangsa. Melestarikan batik berarti menjaga jati diri sebagai bangsa Indonesia.
+        </p>
+    `
+
     },
     {
         slug: "bahasa-persatuan",
@@ -72,24 +93,74 @@ export const articles: Article[] = [
         author: "Author",
         date: "24 Nov 2025",
         content: `
-            <p class="lead text-xl md:text-2xl leading-relaxed mb-8 text-gray-200">
-                <span class="text-6xl float-left mr-3 mt-[-10px] font-heading font-bold text-blue-500">"</span>Kami putra dan putri Indonesia, menjunjung bahasa persatuan, Bahasa Indonesia." Ikrar ketiga Sumpah Pemuda ini adalah keajaiban sosiologis.
-            </p>
+    <p class="lead text-xl md:text-2xl leading-relaxed mb-8 text-gray-200">
+        <span class="text-6xl float-left mr-3 mt-[-10px] font-heading font-bold text-red-500">B</span>ahasa Indonesia lahir dari perjalanan panjang sejarah bangsa. Berakar dari bahasa Melayu sebagai lingua franca sejak era Sriwijaya, bahasa ini dipilih sebagai bahasa persatuan pada Sumpah Pemuda 28 Oktober 1928—sebuah keputusan visioner yang menyatukan ratusan suku dan ratusan bahasa daerah.
+    </p>
 
-            <div class="my-12 p-8 bg-blue-900/10 border border-blue-500/30 rounded-xl relative overflow-hidden">
-                <div class="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-blue-500/20 rounded-full blur-xl"></div>
-                <h4 class="text-blue-400 font-bold text-lg mb-4 relative z-10">Fakta Menarik</h4>
-                <p class="text-gray-300 relative z-10">
-                    Indonesia adalah satu-satunya negara yang berhasil menjadikan bahasa minoritas (Melayu Riau) menjadi bahasa nasional yang diterima oleh mayoritas penduduk (Jawa, Sunda, dll) tanpa pertumpahan darah.
-                </p>
-            </div>
+    <div class="my-12 p-8 bg-red-900/10 border border-red-500/30 rounded-xl relative overflow-hidden">
+        <div class="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-red-500/20 rounded-full blur-xl"></div>
+        <h4 class="text-red-400 font-bold text-lg mb-4 relative z-10">Fakta Penting</h4>
+        <ul class="list-disc pl-5 space-y-2 text-gray-300 relative z-10">
+            <li>Bahasa Indonesia berasal dari bahasa Melayu yang telah digunakan selama berabad-abad sebagai bahasa pergaulan Nusantara.</li>
+            <li>Sumpah Pemuda 1928 menjadi titik awal penetapan bahasa Indonesia sebagai bahasa nasional.</li>
+            <li>Untuk menjaga eksistensinya, Indonesia telah menyelenggarakan 10 Kongres Bahasa Indonesia.</li>
+        </ul>
+    </div>
 
-            <h3>Mengapa Bukan Bahasa Jawa?</h3>
-            <p>Meskipun penutur Bahasa Jawa adalah mayoritas, para pendiri bangsa dengan besar hati memilih Bahasa Melayu Riau sebagai cikal bakal Bahasa Indonesia. Ini adalah bukti kerendahan hati dan visi persatuan yang melampaui ego kesukuan.</p>
+    <h3 class="text-2xl font-heading font-bold mb-3">Akar Historis Bahasa Indonesia</h3>
+    <p class="text-gray-300 mb-6">
+        Dokumen menjelaskan bahwa jauh sebelum Indonesia merdeka, bahasa Melayu telah menjadi alat komunikasi antarsuku dan antarwilayah. Prasasti di Palembang, Jambi, dan Bangka menunjukkan pemakaian bahasa Melayu sejak masa kerajaan Sriwijaya. Dari sinilah bahasa Indonesia menarik kekuatan awalnya: sederhana, luwes, dan mudah diterima.
+    </p>
 
-            <h3>Bahasa yang Demokratis</h3>
-            <p>Bahasa Indonesia tidak mengenal tingkatan tutur (undak-usuk) yang kaku seperti beberapa bahasa daerah. Ini menjadikannya bahasa yang egaliter, di mana setiap orang memiliki kedudukan yang setara dalam komunikasi.</p>
-        `
+    <h3 class="text-2xl font-heading font-bold mb-3">Sumpah Pemuda 1928: Titik Lahir Bahasa Persatuan</h3>
+    <p class="text-gray-300 mb-6">
+        Bahasa Indonesia pertama kali diakui sebagai bahasa nasional melalui ikrar ketiga Sumpah Pemuda. Keputusan para pemuda saat itu sangat strategis: memilih bahasa Melayu (yang bukan bahasa mayoritas) sebagai bahasa pemersatu. Ini menunjukkan semangat kerendahan hati, anti-dominasi, dan visi persatuan yang melampaui batas etnis.
+    </p>
+
+    <blockquote class="my-10 pl-6 border-l-4 border-red-300/30 italic text-2xl text-gray-300 font-serif">
+        “Bahasa Indonesia menjadi kristalisasi semangat kebersamaan rakyat Indonesia dalam berbangsa dan bernegara.”
+    </blockquote>
+
+    <h3 class="text-2xl font-heading font-bold mb-3">Fungsi Bahasa Indonesia</h3>
+    <p class="text-gray-300 mb-6">Bahasa Indonesia memiliki empat fungsi utama sebagai bahasa nasional:</p>
+    <ul class="list-disc pl-5 mb-8 text-gray-300 space-y-2">
+        <li>Lambang kebanggaan nasional.</li>
+        <li>Lambang identitas nasional.</li>
+        <li>Alat pemersatu bangsa beragam suku, budaya, dan bahasa.</li>
+        <li>Alat komunikasi antar daerah dan antar budaya.</li>
+    </ul>
+
+    <h3 class="text-2xl font-heading font-bold mb-3">Kongres Bahasa Indonesia: Menjaga Eksistensi Bahasa</h3>
+    <p class="text-gray-300 mb-6">
+        Untuk menjaga keberlanjutan bahasa Indonesia di tengah globalisasi, pemerintah mengadakan Kongres Bahasa Indonesia sebagai forum nasional. Sejak 1938 hingga 2013, telah dilaksanakan 10 kongres besar yang membahas ejaan, istilah baku, tata bahasa, hingga peran bahasa daerah dan bahasa asing.
+    </p>
+
+    <div class="grid md:grid-cols-2 gap-6 my-12">
+        <div class="bg-white/5 p-6 rounded-xl">
+            <h5 class="font-bold text-white mb-2">Kongres Bahasa Pertama (1938)</h5>
+            <p class="text-sm text-gray-400">Mengawali pembinaan bahasa Indonesia dan mendasari pengakuan resmi bahasa negara dalam UUD 1945.</p>
+        </div>
+        <div class="bg-white/5 p-6 rounded-xl">
+            <h5 class="font-bold text-white mb-2">Kongres Bahasa V (1988)</h5>
+            <p class="text-sm text-gray-400">Melahirkan dua karya monumental: KBBI dan Tata Bahasa Baku Bahasa Indonesia.</p>
+        </div>
+    </div>
+
+    <p class="text-gray-300 mb-6">
+        Kongres-kongres berikutnya terus memperkaya bahasa Indonesia dengan ejaan baru, pedoman istilah, dan visi pengembangan bahasa di era modern. Kongres X (2013) bahkan mengeluarkan rekomendasi kebijakan untuk pemerintah.
+    </p>
+
+    <h3 class="text-2xl font-heading font-bold mb-3">Tantangan Bahasa Indonesia di Era Global</h3>
+    <p class="text-gray-300 mb-6">
+        Globalisasi, teknologi, dan arus informasi menuntut bahasa Indonesia untuk tetap adaptif. Bahasa ini harus mampu menjadi instrumen utama komunikasi nasional yang modern namun tetap berakar pada budaya bangsa.
+    </p>
+
+    <h3 class="text-2xl font-heading font-bold mb-3">Kesimpulan</h3>
+    <p class="text-gray-300 mb-8">
+        Bahasa Indonesia adalah anugerah persatuan yang lahir dari sejarah panjang perjuangan bangsa. Dengan dukungan masyarakat dan pengembangan berkelanjutan melalui kongres-kongres bahasa, bahasa Indonesia akan tetap menjadi identitas dan kebanggaan nasional di tengah arus perubahan zaman.
+    </p>
+`
+
     },
     {
         slug: "kuliner-nusantara",
