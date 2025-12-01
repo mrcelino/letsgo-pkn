@@ -79,6 +79,11 @@ export const articles: Article[] = [
         <p class="text-gray-300 mb-8">
             Batik bukan sekadar karya seni, namun juga media nilai-nilai luhur yang menyatukan masyarakat Indonesia. Filosofi di setiap motif bukan hanya estetika, melainkan ajakan untuk menjaga moralitas, kearifan, dan identitas bangsa. Melestarikan batik berarti menjaga jati diri sebagai bangsa Indonesia.
         </p>
+
+        <h3 class="text-2xl font-heading font-bold mb-3">Sumber</h3>
+        <p class="text-gray-300 mb-8">
+            Trixie, A. A. (2020). Filosofi motif batik sebagai identitas bangsa Indonesia. Folio, 1(1), 1–10. https://journal.uc.ac.id/index.php/FOLIO/article/view/1380/1148
+        </p>      
     `
 
     },
@@ -159,7 +164,13 @@ export const articles: Article[] = [
     <p class="text-gray-300 mb-8">
         Bahasa Indonesia adalah anugerah persatuan yang lahir dari sejarah panjang perjuangan bangsa. Dengan dukungan masyarakat dan pengembangan berkelanjutan melalui kongres-kongres bahasa, bahasa Indonesia akan tetap menjadi identitas dan kebanggaan nasional di tengah arus perubahan zaman.
     </p>
-`
+
+        <h3 class="text-2xl font-heading font-bold mb-3">Sumber</h3>
+        <p class="text-gray-300 mb-8">
+        Repelita, T. (2018). Sejarah perkembangan bahasa Indonesia (Ditinjau dari perspektif sejarah bangsa Indonesia). Jurnal Artefak: History and Education, 5(1), 45–48. http://dx.doi.org/10.25157/ja.v5i1.1927
+
+        </p>      
+    `
 
     },
     {
