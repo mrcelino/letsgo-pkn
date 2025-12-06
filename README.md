@@ -1,36 +1,148 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🇮🇩 Archipelago Insights
 
-## Getting Started
+<div align="center">
+  
+  **Menjelajahi Jati Diri Bangsa Melalui Kepulauan Nusantara**
+  
+  ![Next.js](https://img.shields.io/badge/Next.js-15.1.3-black?style=flat&logo=next.js)
+  ![React](https://img.shields.io/badge/React-19.2.0-blue?style=flat&logo=react)
+  ![Three.js](https://img.shields.io/badge/Three.js-0.181.2-green?style=flat&logo=three.js)
+  ![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=flat&logo=typescript)
+  
+</div>
 
-First, run the development server:
+---
+
+## 📖 Tentang Proyek
+
+**Archipelago Insights** adalah platform pembelajaran interaktif yang mengeksplorasi identitas nasional Indonesia melalui pendekatan visual dan edukatif yang modern.
+
+### 🌟 Filosofi Nama
+
+- **Archipelago** (Kepulauan) — Melambangkan Indonesia sebagai negara kepulauan
+- **Insights** (Pemahaman) — Memberikan wawasan mendalam tentang jati diri bangsa
+
+Konsep ini berangkat dari filosofi bahwa Indonesia, seperti kepulauan, terdiri dari bagian-bagian yang berbeda namun saling terhubung — **keseimbangan antara kemandirian dan keterhubungan dalam satu jati diri bangsa**.
+
+---
+
+## ✨ Fitur Utama
+
+### 🗺️ Peta Interaktif 3D Nusantara
+
+- Visualisasi peta Indonesia dengan teknologi **Three.js** dan **WebGL**
+- Eksplorasi interaktif 38 provinsi dengan animasi 3D yang smooth
+- Informasi detail setiap daerah: suku bangsa, rumah adat, fakta unik, dan kearifan lokal
+
+### 📚 Materi Pembelajaran
+
+- Konten edukatif tentang identitas nasional Indonesia
+- Pembahasan identitas primer: suku, budaya, dan nilai luhur daerah
+- Artikel eksploratif dengan perspektif budaya, sejarah, dan kuliner
+
+### 🎯 Kuis Interaktif
+
+- Evaluasi pemahaman melalui kuis yang engaging
+- Sistem penilaian otomatis dengan feedback langsung
+- Materi kuis mencakup sejarah, budaya, dan wawasan kebangsaan
+
+### 🎨 UI/UX Modern
+
+- Desain dark mode dengan tema "Royal Indonesia Emas"
+- Animasi smooth dan responsif
+- Efek visual premium dengan metallic gold aesthetic
+
+---
+
+## 🚀 Tech Stack
+
+- **Framework:** Next.js 15.1.3 (App Router)
+- **Language:** TypeScript 5
+- **3D Graphics:** Three.js 0.181.2
+- **Styling:** Tailwind CSS 4
+- **Animation:** Framer Motion 12
+- **Icons:** Lucide React
+
+---
+
+## 🛠️ Instalasi & Penggunaan
+
+### Prerequisites
+
+- Node.js 18+
+- npm / yarn / pnpm
+
+### Instalasi
 
 ```bash
+# Clone repository
+git clone https://github.com/mrcelino/letsgo-pkn.git
+cd letsgo-pkn
+
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Buka [http://localhost:3000](http://localhost:3000) untuk melihat hasilnya.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build untuk Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 📁 Struktur Proyek
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+project-pkn/
+├── src/
+│   ├── app/              # Next.js App Router
+│   │   ├── page.tsx      # Landing page
+│   │   ├── layout.tsx    # Root layout
+│   │   └── globals.css   # Global styles
+│   └── components/       # React Components
+│       ├── ThreeScene.tsx       # 3D Map Component
+│       ├── LandingContent.tsx   # Hero & Content Sections
+│       ├── MapOverlay.tsx       # Province Info Overlay
+│       └── QuizSection.tsx      # Interactive Quiz
+├── public/
+│   └── indonesia.json    # GeoJSON data Indonesia
+└── package.json
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🎨 Design System
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Color Palette
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Primary:** `#D4AF37` (Royal Gold) — Melambangkan Indonesia Emas
+- **Accent:** `#E11B22` (Indonesia Red) — Semangat dan keberanian
+- **Base:** `#1a1a1a` (Dark Background) — Modern & Premium
+
+### Typography
+
+- **Heading:** Inter, sans-serif (Bold)
+- **Body:** System UI, sans-serif
+
+---
+
+## 📄 Lisensi
+
+Proyek ini dibuat untuk keperluan edukasi Pendidikan Kewarganegaraan.
+
+---
+
+<div align="center">
+  
+  **🇮🇩 Bhinneka Tunggal Ika 🇮🇩**
+  
+  *Berbeda-beda tetapi tetap satu*
+  
+</div>
