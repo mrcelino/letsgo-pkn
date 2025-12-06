@@ -19,6 +19,8 @@ export const metadata: Metadata = {
   description: "Menjelajahi esensi jati diri bangsa Indonesia melalui perspektif historis, sosiologis, dan politis.",
 };
 
+import BackgroundMusic from "@/components/BackgroundMusic";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -32,6 +34,7 @@ export default function RootLayout({
       <body
         className={`${outfit.variable} ${inter.variable} antialiased bg-[#050505] text-white overflow-x-hidden`}
       >
+        <BackgroundMusic />
         {children}
       </body>
     </html>
