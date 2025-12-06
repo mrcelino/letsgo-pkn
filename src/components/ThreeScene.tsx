@@ -9,9 +9,10 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 interface ThreeSceneProps {
   isMapMode: boolean;
   onRegionSelect: (id: string) => void;
+  selectedRegion: string | null;
 }
 
-export default function ThreeScene({ isMapMode, onRegionSelect }: ThreeSceneProps) {
+export default function ThreeScene({ isMapMode, onRegionSelect, selectedRegion }: ThreeSceneProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const sceneRef = useRef<THREE.Scene | null>(null);
   const cameraRef = useRef<THREE.PerspectiveCamera | null>(null);
@@ -34,6 +35,26 @@ export default function ThreeScene({ isMapMode, onRegionSelect }: ThreeSceneProp
   // Transition State
   const isTransitioningRef = useRef(false);
   const transitionTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const prevSelectedRegionRef = useRef<string | null>(null);
+
+  // --- HANDLE SELECTED REGION CHANGES ---
+  useEffect(() => {
+    // Only reset if we are transitioning FROM a selected region (closing panel)
+    // AND we are in map mode. This prevents the reset from firing when just entering map mode.
+    if (prevSelectedRegionRef.current && !selectedRegion && isMapMode) {
+        // Region was deselected (panel closed) -> Reset View
+        targetCameraPos.current.set(0, 5, 30);
+        targetLookAt.current.set(0, 0, 0);
+        
+        isTransitioningRef.current = true;
+        
+        if (transitionTimeoutRef.current) clearTimeout(transitionTimeoutRef.current);
+        transitionTimeoutRef.current = setTimeout(() => {
+            isTransitioningRef.current = false;
+        }, 2000);
+    }
+    prevSelectedRegionRef.current = selectedRegion;
+  }, [selectedRegion, isMapMode]);
 
   useEffect(() => {
     isMapModeRef.current = isMapMode;
@@ -249,6 +270,20 @@ export default function ThreeScene({ isMapMode, onRegionSelect }: ThreeSceneProp
     controls.maxDistance = 60;
     controls.maxPolarAngle = Math.PI / 2;
     controls.enabled = false;
+    
+    // Mobile Touch Configuration: 1 Finger Pan, 2 Finger Rotate/Zoom
+    controls.touches = {
+        ONE: THREE.TOUCH.PAN,
+        TWO: THREE.TOUCH.DOLLY_ROTATE
+    };
+    controls.enablePan = true;
+    
+    // Stop auto-transition on user interaction
+    controls.addEventListener('start', () => {
+        isTransitioningRef.current = false;
+        if (transitionTimeoutRef.current) clearTimeout(transitionTimeoutRef.current);
+    });
+
     controlsRef.current = controls;
 
     // Raycaster

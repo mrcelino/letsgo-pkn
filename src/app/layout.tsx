@@ -15,7 +15,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Identitas Nasional | Peta Budaya Interaktif",
+  title: "Archipelago Insights | Peta Budaya Interaktif",
   description: "Menjelajahi esensi jati diri bangsa Indonesia melalui perspektif historis, sosiologis, dan politis.",
 };
 

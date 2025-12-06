@@ -86,8 +86,23 @@ export default function ArticleSection() {
 }
 
 function ArticleCard({ article, index }: { article: any; index: number }) {
+    const [isHovered, setIsHovered] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const checkMobile = () => setIsMobile(window.innerWidth < 768);
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+        return () => window.removeEventListener('resize', checkMobile);
+    }, []);
+
     return (
-        <Link href={`/materi/${article.slug}`} className="group relative h-[70vh] w-[450px] shrink-0 overflow-hidden rounded-3xl bg-gray-900 border border-white/10 transition-all hover:border-red-500/50">
+        <Link 
+            href={`/materi/${article.slug}`} 
+            className="group relative h-[70vh] w-[450px] shrink-0 overflow-hidden rounded-3xl bg-gray-900 border border-white/10 transition-all hover:border-red-500/50"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+        >
             {/* Background Image Placeholder */}
             <div className="absolute inset-0 bg-gray-800 transition-transform duration-700 group-hover:scale-110">
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent z-10" />
@@ -96,45 +111,63 @@ function ArticleCard({ article, index }: { article: any; index: number }) {
             </div>
 
             {/* Content */}
-            <div className="relative group w-full h-[600px] rounded-2xl overflow-hidden bg-black">
+            <div className="relative group w-full h-full rounded-2xl overflow-hidden">
     
-    {/* Background Image Full */}
-    <div
-        className="absolute inset-0 bg-cover bg-center transition-all duration-500 group-hover:scale-105"
-        style={{ backgroundImage: `url(${article.image})` }}
-    />
+                {/* Background Image Full */}
+                <div
+                    className="absolute inset-0 bg-cover bg-center transition-all duration-500 group-hover:scale-105"
+                    style={{ backgroundImage: `url(${article.image})` }}
+                />
 
-    {/* Gradient overlay biar teks terbaca */}
-    <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/90" />
+                {/* Gradient overlay biar teks terbaca */}
+                <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/90" />
 
-    {/* CONTENT */}
-    <div className="relative z-20 p-8 flex flex-col justify-end h-full">
-        
-        <div className="flex justify-between items-start mb-4">
-            <span className="px-3 py-1 rounded-full border border-white/20 text-xs text-white backdrop-blur-md">
-                {article.category}
-            </span>
-            <span className="text-gray-400 text-xs font-mono">
-                {article.readTime}
-            </span>
-        </div>
+                {/* CONTENT */}
+                <div className="relative z-20 p-8 flex flex-col justify-end h-full">
+                    
+                    <div className="flex justify-between items-start mb-4">
+                        <span className="px-3 py-1 rounded-full border border-white/20 text-xs text-white backdrop-blur-md">
+                            {article.category}
+                        </span>
+                        <span className="text-gray-400 text-xs font-mono">
+                            {article.readTime}
+                        </span>
+                    </div>
 
-        <h3 className="text-3xl font-heading font-bold text-white mb-3 leading-tight group-hover:text-red-500 transition-colors">
-            {article.title}
-        </h3>
+                    <h3 className="text-3xl font-heading font-bold text-white mb-3 leading-tight group-hover:text-red-500 transition-colors">
+                        {article.title}
+                    </h3>
 
-        <p className="text-gray-300 text-sm line-clamp-3 mb-6 opacity-80 group-hover:opacity-100">
-            {article.excerpt}
-        </p>
+                    {/* Animated Description Wrapper */}
+                    <motion.div
+                        initial={false}
+                        animate={{
+                            height: isMobile || isHovered ? "auto" : 0,
+                            opacity: isMobile || isHovered ? 1 : 0,
+                            marginBottom: isMobile || isHovered ? 24 : 0
+                        }}
+                        transition={{ duration: 0.3, ease: "easeInOut" }}
+                        className="overflow-hidden"
+                    >
+                        <p className="text-gray-300 text-sm line-clamp-3">
+                            {article.excerpt}
+                        </p>
+                    </motion.div>
 
-        <div className="flex items-center gap-2 text-red-400 text-sm font-bold opacity-0 transform translate-y-4 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0">
-            <span>Baca Selengkapnya</span>
-            <i className="fas fa-arrow-right"></i>
-        </div>
+                    <motion.div 
+                        animate={{
+                            opacity: isMobile || isHovered ? 1 : 0,
+                            y: isMobile || isHovered ? 0 : 20
+                        }}
+                        transition={{ duration: 0.3, delay: 0.1 }}
+                        className="flex items-center gap-2 text-red-400 text-sm font-bold"
+                    >
+                        <span>Baca Selengkapnya</span>
+                        <i className="fas fa-arrow-right"></i>
+                    </motion.div>
 
-    </div>
-</div>
-
+                </div>
+            </div>
 
             {/* Number Watermark */}
             <div className="absolute top-4 right-6 text-9xl font-bold text-white/5 z-0 font-heading">

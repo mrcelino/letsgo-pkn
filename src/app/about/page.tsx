@@ -18,32 +18,32 @@ const teamMembers: TeamMember[] = [
     },
     {
         name: "Damarjati Adiyuda Muktitama",
-        nim: "23/",
+        nim: "23/516701/SV/22702",
         role: "Software Engineer",
     },
     {
         name: "Samuel Ardian Valention Silaban",
-        nim: "23/",
+        nim: "23/516727/SV/22705",
         role: "Software Engineer",
     },
     {
         name: "Deandra Santoso",
-        nim: "23/",
+        nim: "23/517045/SV/22736",
         role: "Content Strategist",
     },
     {
         name: "Aulia Rahma",
-        nim: "23/",
+        nim: "23/516584/SV/22691",
         role: "Content Writer",
     },
     {
         name: "Aurelius Bevan Yudira Palevi",
-        nim: "23/",
+        nim: "23/516090/SV/22681",
         role: "Researcher",
     },
     {
         name: "Diaz Anjariski",
-        nim: "23/",
+        nim: "23/515874/TK/56747",
         role: "Researcher",
     },
 ];
