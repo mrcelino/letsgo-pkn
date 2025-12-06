@@ -1,13 +1,16 @@
 "use client";
 
+import { useState } from "react";
 import QuizSection from "./QuizSection";
 import Link from "next/link";
 
 interface LandingContentProps {
   onEnterMapMode: () => void;
+  onMenuOpen: () => void;
 }
 
-export default function LandingContent({ onEnterMapMode }: LandingContentProps) {
+export default function LandingContent({ onEnterMapMode, onMenuOpen }: LandingContentProps) {
+
   return (
     <div id="main-content" className="relative z-10 transition-all duration-500">
         {/* Navigation */}
@@ -30,7 +33,9 @@ export default function LandingContent({ onEnterMapMode }: LandingContentProps) 
                     <button onClick={onEnterMapMode} className="hidden md:flex px-5 py-2 rounded-full bg-red-600 hover:bg-red-700 transition-all text-sm font-semibold shadow-[0_0_15px_rgba(225,27,34,0.4)] cursor-pointer">
                         Buka Peta
                     </button>
-                    <button className="md:hidden text-white text-xl"><i className="fas fa-bars"></i></button>
+                    <button onClick={onMenuOpen} className="md:hidden text-white text-xl z-50 relative">
+                        <i className="fas fa-bars transition-all duration-300"></i>
+                    </button>
                 </div>
             </div>
         </nav>
