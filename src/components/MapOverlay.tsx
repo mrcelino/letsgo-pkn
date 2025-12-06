@@ -26,7 +26,9 @@ export default function MapOverlay({ isActive, onClose, selectedRegion }: MapOve
             'irian jaya': 'papua',
             'daerah istimewa yogyakarta': 'yogyakarta',
             'dki jakarta': 'jakarta',
-            'bangka-belitung': 'bangka belitung'
+            'bangka-belitung': 'bangka belitung',
+            'nusatenggara barat': 'nusa tenggara barat',
+            'nusatenggara timur': 'nusa tenggara timur'
         };
 
         if (nameMapping[lowerRegion]) {
